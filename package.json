@@ -1,0 +1,25 @@
+{
+  "name": "tt-rss-favicon-unread-counter",
+  "version": "0.1.0",
+  "description": "TT-RSS plugin that shows the number of unread items in the favicon",
+  "devDependencies": {
+    "babel-cli": "^6.4.5",
+    "babel-preset-es2015": "^6.3.13",
+    "favico.js": "^0.3.10",
+    "replace": "^0.3.0",
+    "uglify-js": "^2.6.1"
+  },
+  "scripts": {
+    "clean": "rm build/*",
+    "concat": "cat node_modules/favico.js/favico.js build/tmp-favicon-unread-count.js > build/favicon-unread-count.js",
+
+    "prebuild": "cp init.php build",
+    "build": "babel favicon-unread-count.es6 -o build/tmp-babel-favicon-unread-count.js --presets es2015",
+    "postbuild": "sh scripts/function-wrap.sh && npm run concat && node scripts/replace-header-vars.js && node scripts/patch-favicojs.js && rm build/tmp-*",
+
+    "prebuild-dist": "npm run clean && npm run build",
+    "build-dist": "uglifyjs --compress --comments --screw-ie8 build/favicon-unread-count.js -o build/favicon-unread-count.min.js"
+  },
+  "author": "Sven Grunewaldt <strayer@olle-orks.org>",
+  "license": "MIT"
+}
