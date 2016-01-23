@@ -5,8 +5,6 @@
  * @version %VERSION%
  */
 
-console.log(Favico);
-
 var previousUnreadCount = 0;
 const favicon = new Favico({
     animation: 'none'
@@ -46,7 +44,7 @@ const updateBadge = () => {
     } else {
         favicon.badge(0);
     }
-    console.log(unreadCount);
+
     previousUnreadCount = unreadCount;
 };
 
