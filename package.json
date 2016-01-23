@@ -1,6 +1,6 @@
 {
   "name": "tt-rss-favicon-unread-counter",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "TT-RSS plugin that shows the number of unread items in the favicon",
   "devDependencies": {
     "archiver": "^0.21.0",
