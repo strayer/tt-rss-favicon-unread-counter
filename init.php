@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * @author %AUTHOR%
+ * @license %LICENSE%
+ * @version %VERSION%
+ */
+
 class Favicon_Unread_Counter extends Plugin {
     function about() {
         return array(
