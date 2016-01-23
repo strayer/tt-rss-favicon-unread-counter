@@ -1,6 +1,6 @@
 <?php
 
-class Favicon_Unread_Count extends Plugin {
+class Favicon_Unread_Counter extends Plugin {
     function about() {
         return array(
             floatval('%PHP_VERSION%'),
@@ -10,7 +10,7 @@ class Favicon_Unread_Count extends Plugin {
     }
 
     function get_js() {
-        return file_get_contents(__DIR__ . "/favicon-unread-count.min.js");
+        return file_get_contents(__DIR__ . "/favicon-unread-counter.min.js");
     }
 
     function api_version() {
