@@ -12,7 +12,7 @@ Download the [newest release](https://github.com/Strayer/tt-rss-favicon-unread-c
 
 ## Development
 
-The main plugin code is written in ECMASCript 6. To compile the code, various npm scripts are set up.
+The main plugin code is written in ECMAScript 6. To compile the code, various npm scripts are set up.
 
 ```
 # Clean the build directory
@@ -25,4 +25,4 @@ $ npm run build
 $ npm run dist
 ```
 
-The build will probably only work on macOS and Linux due to usage of shell commands.
+The build process will probably only work on macOS and Linux due to usage of shell commands.
