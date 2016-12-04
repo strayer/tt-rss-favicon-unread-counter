@@ -6,15 +6,17 @@
     "archiver": "^0.21.0",
     "babel-cli": "^6.18.0",
     "babel-preset-es2015": "^6.18.0",
+    "eslint": "^3.11.1",
     "favico.js": "^0.3.10",
     "replace": "^0.3.0",
     "uglify-js": "^2.7.5"
   },
   "scripts": {
-    "clean": "rm build/*",
+    "clean": "rm build/* || true",
     "concat": "cat node_modules/favico.js/favico.js build/tmp-favicon-unread-counter.js > build/favicon-unread-counter.js",
+    "lint": "node ./node_modules/.bin/eslint favicon-unread-counter.es6",
 
-    "prebuild": "cp init.php build",
+    "prebuild": "npm run lint && cp init.php build",
     "build": "babel favicon-unread-counter.es6 -o build/tmp-babel-favicon-unread-counter.js --presets es2015",
     "postbuild": "sh scripts/function-wrap.sh && npm run concat && node scripts/replace-header-vars.js && node scripts/patch-favicojs.js && rm build/tmp-*",
 
