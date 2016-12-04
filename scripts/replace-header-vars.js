@@ -1,4 +1,4 @@
-var replace = require('replace');
+var replace = require("replace");
 
 var options = {
     paths: ["build/favicon-unread-counter.js", "build/init.php"],

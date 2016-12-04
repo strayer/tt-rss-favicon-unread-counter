@@ -7,7 +7,7 @@
 
 let previousUnreadCount = 0;
 const favicon = new Favico({
-    animation: 'none'
+    animation: "none"
 });
 
 const log = (msg) => {
