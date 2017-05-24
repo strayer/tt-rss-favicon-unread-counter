@@ -15,6 +15,9 @@ class Favicon_Unread_Counter extends Plugin {
         );
     }
 
+    function init($host) {
+    }
+
     function get_js() {
         return file_get_contents(__DIR__ . "/favicon-unread-counter.min.js");
     }
