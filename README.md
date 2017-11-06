@@ -6,6 +6,10 @@ Requires IE10+ or any other recent browser, see [caniuse.com](http://caniuse.com
 
 ![Screenshot](screenshot.png)
 
+## NOTE: UNMAINTAINED
+
+I've moved on to NewsBlur, but this plugin should still work. I'll try to work on reported issues if something changes in TT-RSS, but can't guarantee that this will continue working.
+
 ## Installation
 
 Download the [newest release](https://github.com/Strayer/tt-rss-favicon-unread-counter/releases) and extract it to your TT-RSS plugins folder, then activate the `favicon_unread_counter` plugin in your users settings.
